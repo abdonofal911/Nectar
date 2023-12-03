@@ -5,6 +5,7 @@ import Colors from '../../themes/Colors';
 import Font from '../../themes/Font';
 import images from '../../assets/images';
 import {useNavigation} from '@react-navigation/native';
+import FontAwesome6 from 'react-native-vector-icons/Entypo';
 
 // {
 //   id: 'dgw4344cwgjcdwjd',
@@ -33,7 +34,11 @@ const ProductCard = ({item, marginHorizontal}) => {
       <Text style={styles.subTitle}>{item.pricing_type}</Text>
       <View style={styles.row}>
         <Text style={styles.price}>${item.price}</Text>
-        <Image source={images.plusicon} style={styles.plus} />
+        {/* <Image source={images.plusicon} style={styles.plus} /> */}
+
+        <Pressable style={styles.button}>
+          <FontAwesome6 name="plus" color="white" size={30} />
+        </Pressable>
       </View>
     </Pressable>
   );
@@ -42,6 +47,18 @@ const ProductCard = ({item, marginHorizontal}) => {
 export default ProductCard;
 
 const styles = StyleSheet.create({
+  button: {
+    width: vScale(40),
+    height: vScale(40),
+    backgroundColor: Colors.mainColor,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  plusText: {
+    fontSize: fontScale(30),
+    color: 'white',
+  },
   container: {
     width: scale(174),
     borderRadius: scale(18),

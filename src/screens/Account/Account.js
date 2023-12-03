@@ -45,6 +45,7 @@ const Account = ({navigation}) => {
           data={list}
           renderItem={({item, index}) => <AccountRow item={item} />}
           keyExtractor={(item, index) => index}
+          scrollEnabled={false}
         />
       </View>
       <AppButton
