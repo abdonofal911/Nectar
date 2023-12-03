@@ -3,7 +3,7 @@
 ## Description
 
 Online Groceries App
-Features : -React-Hooks -Redux -React-Navigation -Custom Components
+Features : -React-Hooks -Redux -React-Navigation -Custom-Components -axios -formik&yup
 
 ## Screenshots
 
